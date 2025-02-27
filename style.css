@@ -1,0 +1,93 @@
+:root{
+    --yellow: #FFC917;
+    --blue: #003082;
+    --light-blue: #0063D3;
+    --red: #DB0029;
+    --green: #009A42;
+    --background-color: #E6E6E9;
+}
+
+
+
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+article{
+    background-color: #ffe9ed;
+}
+
+article h2{
+    display: flex;
+    justify-self: center;
+    color: var(--red);
+    margin:0;
+    font-size: x-small;
+    padding: 5px;
+
+}
+
+header{
+    background-color: var(--yellow);
+    height: 115px;
+    width: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    display:flex;
+    align-items: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+nav img{
+    width: 9em;
+}
+
+main section{
+    grid-column: span 12;
+    background-color: white;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin: 0;
+}
+
+h1{
+    font-size: xx-large;
+    grid-column: span 12;
+
+}
+
+main section p{
+
+    margin-bottom: 2em;
+    grid-column: span 12;
+}
+
+main section a{
+    text-decoration: none;
+    background-color: var(--light-blue);
+    color: white;
+    padding: 1em;
+    border-radius: 4px;
+    grid-column: span 2;
+    min-width: 182px;
+    text-align: center;
+    box-shadow: inset 0 -.125rem 0 var(--blue);
+    transition: box-shadow .15s ease-in-out;
+}
+
+main section a:hover{
+    box-shadow: inset 0 -50px 0 var(--blue);
+}
