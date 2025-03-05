@@ -18,28 +18,106 @@
 
         </nav>
     </header>
-    <main>
+    <main class="stap1">
         <section>
             <h2>Gegevens van de Overledene</h2>
             <p>Vul hier de gegevens van de overledene</p>
             <form>
-                <label>Voornaam<input type="text" required></label>
+                <article class="space-between">
+                    <label>Voornaam<input type="text" required></label>
 
-                <label>Tussenvoegsel<input type="text" ></label>
+                    <label>Tussenvoegsel<input type="text"></label>
 
-                <label>Achternaam<input type="text"></label>
+                    <label>Achternaam<input type="text"></label>
 
-                <label>BSN-nummer<input type="number"></label>
+                    <label>BSN-nummer overledene<input type="number"></label>
 
-                <label>Overlijdensdatum<input type="date"></label>
+                    <label>Overlijdensdatum<input type="date"></label>
+                </article>
+
+                <article class="space-between">
+                    <div>
+                        <p>Was de overledene getrouwd of had de overledene een
+                            geregistreerd partner op het moment van overlijden?</p>
+                        <label><input type="radio" name="1b" value="Nee"> Nee</label>
+                        <label><input type="radio" name="1b" id="1b" value="Ja"> Ja</label>
+                    </div>
+                    <div class="extra1b pop-up">
+
+                        <p>Hadden de overledene en diens echtgenoot of
+                            geregistreerd partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een
+                            notariële
+                            akte?</p>
+                        <label><input type="radio" name="1b-2">Nee</label>
+                        <label><input type="radio" name="1b-2">Ja</label>
+
+                        <p>Hadden de overledene en diens partner een finaal
+                            verrekenbeding?</p>
+                        <label><input type="radio" name="1b-3">Nee</label>
+                        <label><input type="radio" name="1b-3">Ja</label>
+
+                        <p>Datum huwelijkse of partnerschapsvoorwaarden</p>
+                        <input type="date">
+                    </div>
+
+                </article>
+
+                <article class="space-between">
+                    <div>
+                        <p>Had de overledene kinderen?</p>
+                        <label><input type="radio" name="1c" value="Nee"> Nee</label>
+                        <label><input type="radio" name="1c" id="1c" value="Ja"> Ja</label>
+                    </div>
+                    <div class="extra1c pop-up">
+
+                        <p>Is 1 van deze kinderen eerder overleden dan de
+                            overledene voor wie u nu aangifte doet?</p>
+                        <label><input type="radio" name="1c-2">Nee</label>
+                        <label><input type="radio" name="1c-2" id="1c-2">Ja</label>
+
+                        <div>
+                            <p>Had dit overleden kind zelf kinderen?</p>
+                            <label><input type="radio" name="1c-3">Nee</label>
+                            <label><input type="radio" name="1c-3">Ja</label>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="space-between">
+                    <div>
+                        <p>Had de overledene een testament?</p>
+                        <label><input type="radio" name="1d" value="Nee"> Nee</label>
+                        <label><input type="radio" name="1d" id="1d" value="Ja"> Ja</label>
+                    </div>
+                    <div class="extra1d pop-up">
+                        <input type="number">
+
+                        <label>Voornaam<input type="text" required></label>
+    
+                        <label>Tussenvoegsel<input type="text"></label>
+    
+                        <label>Achternaam<input type="text"></label>
+
+                        <input type="text">
+
+                        <input type="date">
+
+                        <label>BSN-nummer overledene<input type="number"></label>
+                    </div>
+                </article>
 
 
-                <a href="index.html">Stap terug</a>
-                <input type="submit">
+                <article class="space-between">
+                    <a href="index.html">Stap terug</a>
+
+                    <input type="submit">
+                </article>
             </form>
         </section>
 
     </main>
 </body>
+
+
 
 </html>

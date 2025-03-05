@@ -17,10 +17,6 @@ article{
     background-color: #ffe9ed;
 }
 
-p{
-    margin: 0;
-}
-
 article h2{
     display: flex;
     justify-self: center;
@@ -90,7 +86,10 @@ main section a:hover{
 }
 
 form{
-
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin: 0 auto;
 }
 
 label{
@@ -99,18 +98,6 @@ label{
     margin-right: 1em;
     width: 100%;
 }
-
-.space-between{
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 16px;
-    margin: 0 auto;
-    margin-top: 2em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid var(--background-color);
-}
-
 
 .stap1 label:nth-of-type(1){
     grid-column: span 4;
@@ -130,64 +117,11 @@ label{
 
 .stap1 label:nth-of-type(5){
     grid-column: 6 / span 3;
-
 }
 
-.stap1 form div:nth-of-type(1){
-    grid-column: 1 / span 4;
+.stap1 form div{
+    background-color: black;
 }
-
-.stap1 form div:nth-of-type(1) label{
-    display:flex;
-    flex-direction: row;
-
-}
-
-/* Stijl van de pop up van de extra vragen */
-.pop-up {
-    grid-column: 6 / span 7;
-    background-color: rgb(233, 250, 255);
-    display:none;
-    padding: 2em;
-    transform: translateY(-20px); /* Begin buiten beeld */
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Zorgt ervoor dat 'visibility' na de animatie pas verandert */
-    margin-top: 1em;
-}
-
-.pop-up label {
-    display: flex;
-    flex-direction: row;
-}
-
-.pop-up p {
-    margin-bottom: 1em;
-}
-
-.extra1c div{
-    display:none;
-    margin-top: 1em;
-}
-
-
-
-/* het laten zien van de extra vragen waar nodig */
-body:has(input[type="radio"][id="1b"]:nth-of-type(1):checked) form .extra1b {
-    display:block;
-}
-
-body:has(input[type="radio"][id="1c"]:nth-of-type(1):checked) form .extra1c {
-    display:block;
-}
-
-body:has(input[type="radio"][id="1c-2"]:nth-of-type(1):checked) form .extra1c div{
-    display:block;
-}
-
-body:has(input[type="radio"][id="1d"]:nth-of-type(1):checked) form .extra1d{
-    display:block;
-}
-
-
 
 
 input[type="text"],
@@ -201,11 +135,6 @@ input[type="date"]{
     margin-top: 1em;
     border: 1px solid ;
     border-radius: 4px;
-}
-
-input[type="radio"]{
-    margin-right: 1em;
-    margin-bottom: 1em;
 }
 
 input[type="submit"]{
@@ -226,10 +155,3 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
-
-
-
-
-/* vraag 11A OPTgroup met select input, om aanbevolen te geven, gebruik ook hr
-
-Output in een input voor het berekenen van rekensommen*/
