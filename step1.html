@@ -23,24 +23,29 @@
             <h2>Gegevens van de Overledene</h2>
             <p>Vul hier de gegevens van de overledene</p>
             <form>
-                <article class="space-between">
+                <fieldset class="space-between">
                     <label>Voornaam<input type="text" required></label>
 
-                    <label>Tussenvoegsel<input type="text"></label>
+                    <label>Tussenv<input type="text"></label>
 
                     <label>Achternaam<input type="text"></label>
 
                     <label>BSN-nummer overledene<input type="number"></label>
 
                     <label>Overlijdensdatum<input type="date"></label>
-                </article>
+                </fieldset>
 
-                <article class="space-between">
+                <fieldset class="space-between">
+                    <legend hidden>Partnerschapsvoorwaarden</legend>
                     <div>
                         <p>Was de overledene getrouwd of had de overledene een
                             geregistreerd partner op het moment van overlijden?</p>
-                        <label><input type="radio" name="1b" value="Nee"> Nee</label>
-                        <label><input type="radio" name="1b" id="1b" value="Ja"> Ja</label>
+                        <input type="radio" name="1b" value="Nee" id="1b-nee">
+                        <label for="1b-nee">Nee</label>
+
+                        <input type="radio" name="1b" id="1b-ja" value="Ja">
+                        <label for="1b-ja">Ja</label>
+
                     </div>
                     <div class="extra1b pop-up">
 
@@ -48,70 +53,90 @@
                             geregistreerd partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een
                             notariële
                             akte?</p>
-                        <label><input type="radio" name="1b-2">Nee</label>
-                        <label><input type="radio" name="1b-2">Ja</label>
+                        <input type="radio" name="1b-2" id="nee-b-2">
+                        <label for="nee-b-2">Nee</label>
+
+                        <input type="radio" name="1b-2" id="ja-b-2">
+                        <label for="ja-b-2">Ja</label>
 
                         <p>Hadden de overledene en diens partner een finaal
                             verrekenbeding?</p>
-                        <label><input type="radio" name="1b-3">Nee</label>
-                        <label><input type="radio" name="1b-3">Ja</label>
+                        <input type="radio" name="1b-3" id="nee-b-3">
+                        <label for="nee-b-3">Nee</label>
+
+                        <input type="radio" name="1b-3" id="ja-b-3">
+                        <label for="ja-b-3">Ja</label>
 
                         <p>Datum huwelijkse of partnerschapsvoorwaarden</p>
                         <input type="date">
                     </div>
 
-                </article>
+                </fieldset>
 
-                <article class="space-between">
+                <fieldset class="space-between">
+                    <legend hidden>Kinderen van overledene</legend>
                     <div>
                         <p>Had de overledene kinderen?</p>
-                        <label><input type="radio" name="1c" value="Nee"> Nee</label>
-                        <label><input type="radio" name="1c" id="1c" value="Ja"> Ja</label>
+                        <input type="radio" name="1c" value="Nee" id="nee">
+                        <label for="nee">Nee</label>
+
+                        <input type="radio" name="1c" id="1c" value="Ja">
+                        <label for="1c">Ja</label>
                     </div>
                     <div class="extra1c pop-up">
 
                         <p>Is 1 van deze kinderen eerder overleden dan de
                             overledene voor wie u nu aangifte doet?</p>
-                        <label><input type="radio" name="1c-2">Nee</label>
-                        <label><input type="radio" name="1c-2" id="1c-2">Ja</label>
+                        <input type="radio" name="1c-2" id="nee-2">
+                        <label for="nee-2">Nee</label>
 
+                        <input type="radio" name="1c-2" id="1c-2">
+                        <label for="1c-2">Ja</label>
                         <div>
                             <p>Had dit overleden kind zelf kinderen?</p>
-                            <label><input type="radio" name="1c-3">Nee</label>
-                            <label><input type="radio" name="1c-3">Ja</label>
+                            <input type="radio" name="1c-3" id="nee-3">
+                            <label for="nee-3">Nee</label>
+
+                            <input type="radio" name="1c-3" id="ja-3">
+                            <label for="ja-3">Ja</label>
                         </div>
                     </div>
-                </article>
+                </fieldset>
 
-                <article class="space-between">
+                <fieldset class="space-between">
+                    <legend hidden>Testament overledene</legend>
                     <div>
                         <p>Had de overledene een testament?</p>
-                        <label><input type="radio" name="1d" value="Nee"> Nee</label>
-                        <label><input type="radio" name="1d" id="1d" value="Ja"> Ja</label>
+                        <input type="radio" name="1d" value="Nee" id="1d-nee">
+                        <label for="1d-nee">Nee</label>
+
+                        <input type="radio" name="1d" id="1d-ja" value="Ja">
+                        <label for="1d-ja">Ja</label>
+
                     </div>
                     <div class="extra1d pop-up">
-                        <input type="number">
+                        <label>Protocolnummer notaris<input type="number"></label>
 
                         <label>Voornaam<input type="text" required></label>
-    
+
                         <label>Tussenvoegsel<input type="text"></label>
-    
+
                         <label>Achternaam<input type="text"></label>
 
-                        <input type="text">
+                        <label>Vestigingsplaats<input type="text"></label>
 
-                        <input type="date">
+                        <label>Datum testament of wijziging<input type="date"></label>
 
                         <label>BSN-nummer overledene<input type="number"></label>
                     </div>
-                </article>
+                </fieldset>
 
 
-                <article class="space-between">
+                <fieldset class="space-between">
                     <a href="index.html">Stap terug</a>
 
                     <input type="submit">
-                </article>
+                </fieldset>
             </form>
         </section>
 
