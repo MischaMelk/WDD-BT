@@ -22,15 +22,15 @@
         <section>
             <h2>Gegevens van de Overledene</h2>
             <p>Vul hier de gegevens van de overledene</p>
-            <form>
+            <form action="/step2.html" method="get">
                 <fieldset class="space-between">
-                    <label>Voornaam<input type="text" required></label>
+                    <label>Voornaam<input type="text"></label>
 
                     <label>Tussenv<input type="text"></label>
 
                     <label>Achternaam<input type="text"></label>
 
-                    <label>BSN-nummer overledene<input type="number"></label>
+                    <label>BSN-nummer overledene<input type="number" id="bsn1" oninput="updateBSN()"></label>
 
                     <label>Overlijdensdatum<input type="date"></label>
                 </fieldset>
@@ -117,7 +117,7 @@
                     <div class="extra1d pop-up">
                         <label>Protocolnummer notaris<input type="number"></label>
 
-                        <label>Voornaam<input type="text" required></label>
+                        <label>Voornaam<input type="text"></label>
 
                         <label>Tussenvoegsel<input type="text"></label>
 
@@ -127,7 +127,7 @@
 
                         <label>Datum testament of wijziging<input type="date"></label>
 
-                        <label>BSN-nummer overledene<input type="number"></label>
+                        <label>BSN-nummer overledene<input type="number" id="bsn2"></label>
                     </div>
                 </fieldset>
 
@@ -135,12 +135,13 @@
                 <fieldset class="space-between">
                     <a href="index.html">Stap terug</a>
 
-                    <input type="submit">
+                    <input type="submit" value="Volgende stap" formaction="/step2.html">
                 </fieldset>
             </form>
         </section>
 
     </main>
+    <script src="stap1script.js"></script>
 </body>
 
 
