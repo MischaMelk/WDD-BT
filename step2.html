@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stap-2.css">
 
 </head>
+
 <body>
     <article>
         <h2>Let op! Dit is een schoolproject, niet voor gebruik van serieuze doeleinden!</h2>
@@ -14,14 +17,105 @@
     <header>
         <nav>
             <img src="images/ns-logo.png" alt="NS logo">
-
         </nav>
     </header>
-    <main>
+    <main class="stap2">
         <section>
-            <h2>Pagina voor stap 2</h2>
-            <p>Vul hier de gegevens</p>
+            <h2>Gegevens verkrijgers</h2>
+        
+            <p>Vul de gegevens in van de persoon of instelling.</p>
+            <form action="/step2.html" 
+            method="get">
+                <fieldset>
+                    <legend hidden>Gegevens persoon</legend>
+
+                    <div class="space-between">
+                        <h3>Gegevens persoon</h3>
+                        <label>BSN-nummer persoon<input type="number"></label>
+
+                        <label>Voornaam<input type="text"></label>
+
+                        <label>Tussenv<input type="text"></label>
+
+                        <label>Achternaam<input type="text"></label>
+
+                        <label>Overlijdensdatum</label>
+                        <label>Dag<input type="number"></label>
+                        <label>Maand<input type="number"></label>
+                        <label>Jaar<input type="number"></label>
+
+                        <h3>Gegevens instelling</h3>
+
+                        <label>RSIN instelling<input type="number"></label>
+
+                        <label>Naam instelling<input type="text"></label>
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Adresgegevens</legend>
+
+                    <section class="space-between">
+
+
+                        <div>
+                            <p>Woont de verkrijger in Nederland of in het buitenland</p>
+
+                            <input type="radio" name="4b" value="NL" id="4b-nl" required>
+                            <label for="4b-nl">Nederland</label>
+
+                            <input type="radio" name="4b" id="4b-bui" value="Ja" required>
+                            <label for="4b-bui">Buitenland</label>
+                        </div>
+                        <div>
+                            <h3>Adresgegevens Nederland</h3>
+                            <label>Straat<input type="text"></label>
+                            <label>Huisnummer<input type="number"></label>
+                            <label>Toevoeging<input type="text"></label>
+                            <label>Postcode<input type="text"></label>
+                            <label>Woonplaats<input type="text"></label>
+                        </div>
+                        <div>
+                            <h3>Adresgegevens Buitenland</h3>
+                            <label>Straat<input type="text"></label>
+                            <label>Huisnummer<input type="number"></label>
+                            <label>Postcode<input type="text"></label>
+                            <label>Woonplaats<input type="text"></label>
+                            <label>Landcode<input type="text"></label>
+                        </div>
+
+
+                    </section>
+                </fieldset>
+
+                <fieldset>
+                    <section class="space-between">
+                        <h3>Verdeling</h3>
+                        <p>Wat is het erfdeel van deze
+                            verkrijger?</p>
+
+                        <label>Breuk</label>
+                        <input type="number" placeholder="bijv. 3" id="breuk-1">
+                        <input type="number" placeholder="bijv. 5" id="breuk-2">
+
+                        <label>Percentage</label>
+                        <input type="number" placeholder="bijv. 40" id="procent">
+                    </section>
+                </fieldset>
+
+                <fieldset class="space-between">
+                    <a href="index.html">Stap terug</a>
+
+                    <input type="submit" value="Volgende stap" formaction="/step2.html">
+                </fieldset>
+
+
+            </form>
         </section>
+
     </main>
+    <script src="stap1script.js"></script>
 </body>
+
 </html>

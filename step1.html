@@ -22,17 +22,21 @@
         <section>
             <h2>Gegevens van de Overledene</h2>
             <p>Vul hier de gegevens van de overledene</p>
-            <form action="/step2.html" method="get">
-                <fieldset class="space-between">
-                    <label>Voornaam<input type="text"></label>
+            <form action="/step2.html" method="post">
+                <fieldset>
+                    <div class="space-between">
+                    <label>Voornaam<input type="text" required></label>
 
                     <label>Tussenv<input type="text"></label>
 
-                    <label>Achternaam<input type="text"></label>
+                    <label>Achternaam<input type="text" required></label>
 
                     <label>BSN-nummer overledene<input type="number" id="bsn1" oninput="updateBSN()"></label>
-
-                    <label>Overlijdensdatum<input type="date"></label>
+                    <label>Overlijdensdatum</label>
+                    <label>Dag<input type="number" min="0" max="31"></label>
+                    <label>Maand<input type="number"></label>
+                    <label>Jaar<input type="number"></label>
+                </div>
                 </fieldset>
 
                 <fieldset class="space-between">
