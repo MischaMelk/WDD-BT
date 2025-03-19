@@ -22,21 +22,25 @@
         <section>
             <h2>Gegevens van de Overledene</h2>
             <p>Vul hier de gegevens van de overledene</p>
-            <form action="/step2.html" method="post">
+            <form action="/step2.html" method="get">
                 <fieldset>
                     <div class="space-between">
-                    <label>Voornaam<input type="text" required></label>
+                        <label>Voornaam<input type="text" id="VN-1" placeholder="Bijv. Henk" required></label>
 
-                    <label>Tussenv<input type="text"></label>
+                        <label>Tussenv<input type="text" id="TV-1" placeholder="Bijv. de"></label>
 
-                    <label>Achternaam<input type="text" required></label>
+                        <label>Achternaam<input type="text" id="AN-1" placeholder="Bijv. Jong" required></label>
 
-                    <label>BSN-nummer overledene<input type="number" id="bsn1" oninput="updateBSN()"></label>
-                    <label>Overlijdensdatum</label>
-                    <label>Dag<input type="number" min="0" max="31"></label>
-                    <label>Maand<input type="number"></label>
-                    <label>Jaar<input type="number"></label>
-                </div>
+                        <label>BSN-nummer overledene<input type="text" id="bsn1" minlength="8" maxlength="9"
+                                pattern="\d{8,9}" placeholder="Bijv. 12345678(9)"
+                                required></label>
+                        <label>Overlijdensdatum</label>
+                        <label>Dag<input type="number" min="0" max="31" placeholder="DD" id="dag-1" required></label>
+                        <label>Maand<input type="number" min="1" max="12" placeholder="MM" id="maand-1"
+                                required></label>
+                        <label>Jaar<input type="number" min="1900" max="2025" placeholder="JJJJ" id="jaar-1"
+                                required></label>
+                    </div>
                 </fieldset>
 
                 <fieldset class="space-between">
@@ -44,10 +48,10 @@
                     <div>
                         <p>Was de overledene getrouwd of had de overledene een
                             geregistreerd partner op het moment van overlijden?</p>
-                        <input type="radio" name="1b" value="Nee" id="1b-nee">
+                        <input type="radio" name="1b" value="Nee" id="1b-nee" required>
                         <label for="1b-nee">Nee</label>
 
-                        <input type="radio" name="1b" id="1b-ja" value="Ja">
+                        <input type="radio" name="1b" id="1b-ja" value="Ja" required>
                         <label for="1b-ja">Ja</label>
 
                     </div>
@@ -70,9 +74,12 @@
 
                         <input type="radio" name="1b-3" id="ja-b-3">
                         <label for="ja-b-3">Ja</label>
-
-                        <p>Datum huwelijkse of partnerschapsvoorwaarden</p>
-                        <input type="date">
+                        <div>
+                            <p>Datum huwelijkse of partnerschapsvoorwaarden</p>
+                            <label>Dag<input type="number" min="0" max="31" placeholder="DD"></label>
+                            <label>Maand<input type="number" min="1" max="12" placeholder="MM"></label>
+                            <label>Jaar<input type="number" min="1900" max="2025" placeholder="JJJJ"></label>
+                        </div>
                     </div>
 
                 </fieldset>
@@ -81,10 +88,10 @@
                     <legend hidden>Kinderen van overledene</legend>
                     <div>
                         <p>Had de overledene kinderen?</p>
-                        <input type="radio" name="1c" value="Nee" id="nee">
+                        <input type="radio" name="1c" value="Nee" id="nee" required>
                         <label for="nee">Nee</label>
 
-                        <input type="radio" name="1c" id="1c" value="Ja">
+                        <input type="radio" name="1c" id="1c" value="Ja" required>
                         <label for="1c">Ja</label>
                     </div>
                     <div class="extra1c pop-up">
@@ -111,10 +118,10 @@
                     <legend hidden>Testament overledene</legend>
                     <div>
                         <p>Had de overledene een testament?</p>
-                        <input type="radio" name="1d" value="Nee" id="1d-nee">
+                        <input type="radio" name="1d" value="Nee" id="1d-nee" required>
                         <label for="1d-nee">Nee</label>
 
-                        <input type="radio" name="1d" id="1d-ja" value="Ja">
+                        <input type="radio" name="1d" id="1d-ja" value="Ja" required>
                         <label for="1d-ja">Ja</label>
 
                     </div>
@@ -129,9 +136,12 @@
 
                         <label>Vestigingsplaats<input type="text"></label>
 
-                        <label>Datum testament of wijziging<input type="date"></label>
+                        <label>Datum testament of wijziging</label>
+                        <label>Dag<input type="number" min="0" max="31" placeholder="DD"></label>
+                        <label>Maand<input type="number" min="1" max="12" placeholder="MM"></label>
+                        <label>Jaar<input type="number" min="1900" max="2025" placeholder="JJJJ"></label>
 
-                        <label>BSN-nummer overledene<input type="number" id="bsn2"></label>
+
                     </div>
                 </fieldset>
 
@@ -147,7 +157,5 @@
     </main>
     <script src="stap1script.js"></script>
 </body>
-
-
 
 </html>

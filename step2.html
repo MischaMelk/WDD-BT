@@ -31,24 +31,30 @@
 
                     <div class="space-between">
                         <h3>Gegevens persoon</h3>
-                        <label>BSN-nummer persoon<input type="number"></label>
+                        <label>BSN-nummer persoon<input type="text" id="bsn2" minlength="8" maxlength="9"
+                            pattern="\d{8,9}" placeholder="Bijv. 12345678(9)"
+                            required></label>
 
-                        <label>Voornaam<input type="text"></label>
+                        <label>Voornaam<input type="text" id="VN-2" placeholder="Bijv. Henk" required></label>
 
-                        <label>Tussenv<input type="text"></label>
+                        <label>Tussenv<input type="text" id="TV-2" placeholder="Bijv. de"></label>
 
-                        <label>Achternaam<input type="text"></label>
+                        <label>Achternaam<input type="text" id="AN-2" placeholder="Bijv. Jong" required></label>
 
                         <label>Overlijdensdatum</label>
-                        <label>Dag<input type="number"></label>
-                        <label>Maand<input type="number"></label>
-                        <label>Jaar<input type="number"></label>
+                        <label>Dag<input type="number" min="0" max="31" placeholder="DD" id="dag-2" required></label>
+                        <label>Maand<input type="number" min="1" max="12" placeholder="MM" id="maand-2"
+                            required></label>
+                        <label>Jaar<input type="number" min="1900" max="2025" placeholder="JJJJ" id="jaar-2"
+                            required></label>
 
                         <h3>Gegevens instelling</h3>
 
-                        <label>RSIN instelling<input type="number"></label>
+                        <label>RSIN instelling<input type="text" id="rsin" minlength="9" maxlength="9"
+                            pattern="\d{8,9}" placeholder="Bijv. 123456789"
+                            required></label>
 
-                        <label>Naam instelling<input type="text"></label>
+                        <label>Naam instelling<input type="text" id="rsin-naam" placeholder="Bijv. Belastingdienst" required></label>
 
                     </div>
                 </fieldset>
@@ -68,18 +74,18 @@
                             <input type="radio" name="4b" id="4b-bui" value="Ja" required>
                             <label for="4b-bui">Buitenland</label>
                         </div>
-                        <div>
+                        <div class="pop-up-2a">
                             <h3>Adresgegevens Nederland</h3>
                             <label>Straat<input type="text"></label>
-                            <label>Huisnummer<input type="number"></label>
+                            <label>Huis nr.<input type="number"></label>
                             <label>Toevoeging<input type="text"></label>
                             <label>Postcode<input type="text"></label>
                             <label>Woonplaats<input type="text"></label>
                         </div>
-                        <div>
+                        <div class="pop-up-2b">
                             <h3>Adresgegevens Buitenland</h3>
                             <label>Straat<input type="text"></label>
-                            <label>Huisnummer<input type="number"></label>
+                            <label>Huis nr.<input type="number"></label>
                             <label>Postcode<input type="text"></label>
                             <label>Woonplaats<input type="text"></label>
                             <label>Landcode<input type="text"></label>
@@ -105,7 +111,7 @@
                 </fieldset>
 
                 <fieldset class="space-between">
-                    <a href="index.html">Stap terug</a>
+                    <a href="step1.html">Stap terug</a>
 
                     <input type="submit" value="Volgende stap" formaction="/step2.html">
                 </fieldset>

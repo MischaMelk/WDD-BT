@@ -85,7 +85,7 @@ main section a:hover {
   box-shadow: inset 0 -57px 0 var(--blue);
 }
 
-fieldset{
+fieldset {
   border: none;
   width: 100%;
   margin-left: 0;
@@ -129,27 +129,23 @@ label {
 
 .stap1 label:nth-of-type(4) {
   grid-column: 1 / span 3;
-
 }
 
 .stap1 label:nth-of-type(5) {
   grid-column: 1 / span 1;
-
 }
 
 .stap1 label:nth-of-type(6) {
   grid-column: 1 / span 1;
   font-weight: normal;
-
 }
 
-.stap1 label:nth-of-type(7){
+.stap1 label:nth-of-type(7) {
   grid-column: 2 / span 1;
   font-weight: normal;
-
 }
 
-.stap1 label:nth-of-type(8){
+.stap1 label:nth-of-type(8) {
   grid-column: 3 / span 1;
   font-weight: normal;
 }
@@ -204,6 +200,30 @@ body:has(input[type="radio"][id="1d-ja"]:checked) form .extra1d {
   grid-column-gap: 1.2%;
 }
 
+.extra1b div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1%;
+}
+
+.extra1b div label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.extra1b div label:nth-of-type(1) {
+  grid-column: 1 / span 1;
+}
+
+.extra1b div label:nth-of-type(2) {
+  grid-column: 2 / span 1;
+}
+
+.extra1b div label:nth-of-type(3) {
+  grid-column: 3 / span 1;
+}
+
 .extra1d label {
   display: flex;
   flex-direction: column;
@@ -231,11 +251,19 @@ body:has(input[type="radio"][id="1d-ja"]:checked) form .extra1d {
 }
 
 .extra1d label:nth-of-type(6) {
-  grid-area: 3 / 4 / 4 / 6;
+  grid-area: 4 / 1 / 5 / 6;
 }
 
 .extra1d label:nth-of-type(7) {
-  grid-area: 4 / 1 / 5 / 3;
+  grid-area: 5 / 1 / 5 / 2;
+}
+
+.extra1d label:nth-of-type(8) {
+  grid-area: 5 / 2 / 5 / 3;
+}
+
+.extra1d label:nth-of-type(9) {
+  grid-area: 5 / 3 / 5 / 3;
 }
 
 input[type="text"],
@@ -252,13 +280,21 @@ input[type="date"] {
   font-size: large;
 }
 
-input:required:valid {
-  border-left: 5px solid var(--green); 
+input:required:valid:not(:focus) {
+  border-left: 5px solid var(--green);
+  background-image: url(images/check.png);
+  background-position: right 0.5em center;
+  background-repeat: no-repeat;
+  background-size: 1em;
 }
 
-/* input:required:invalid {
-  border-left: 5px solid var(--red); 
-} */
+input:required:invalid:not(:focus):not(:placeholder-shown) {
+  border-left: 5px solid var(--red);
+  background-image: url(images/cross.png);
+  background-position: right 0.5em center;
+  background-repeat: no-repeat;
+  background-size: 0.8em;
+}
 
 /* Styling voor de radio buttons in de site */
 input[type="radio"] {
@@ -346,31 +382,40 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 750px) {
+  body:has(input[type="radio"][id="1d-ja"]:checked) form .extra1d {
+    grid-template-rows: (8, 1fr);
+  }
 
-    body:has(input[type="radio"][id="1d-ja"]:checked) form .extra1d{
-        grid-template-rows: (7, 1fr);
-    }
+  .stap1 label:nth-of-type(1) {
+    grid-column: span 4;
+  }
 
-    .stap1 label:nth-of-type(1) {
-        grid-column: span 4;
-      }
-      
-      .stap1 label:nth-of-type(2) {
-        grid-column: 5 / span 2;
-      }
-      
-      .stap1 label:nth-of-type(3) {
-        grid-column: 7 / span 6;
-      }
-      
-      .stap1 label:nth-of-type(4) {
-        grid-column: 1 / span 6;
-      }
-      
-      .stap1 label:nth-of-type(5) {
-        grid-column: 7 / span 3;
-      }
-    
+  .stap1 label:nth-of-type(2) {
+    grid-column: 5 / span 2;
+  }
+
+  .stap1 label:nth-of-type(3) {
+    grid-column: 7 / span 6;
+  }
+
+  .stap1 label:nth-of-type(4) {
+    grid-column: 1 / span 6;
+  }
+
+  .stap1 label:nth-of-type(5) {
+    grid-column: 1 / span 3;
+  }
+
+  .stap1 label:nth-of-type(6) {
+    grid-column: 1 / span 2;
+  }
+  .stap1 label:nth-of-type(7) {
+    grid-column: 3 / span 2;
+  }
+  .stap1 label:nth-of-type(8) {
+    grid-column: 5 / span 2;
+  }
+
   .extra1d label:nth-of-type(1) {
     grid-column: 1 / span 5;
     grid-row: 1;
@@ -402,11 +447,24 @@ input[type="submit"]:hover {
   }
 
   .extra1d label:nth-of-type(7) {
-    grid-column: 1 / span 5;
+    grid-column: 1 / span 1;
     grid-row: 7;
   }
 
-  
+  .extra1d label:nth-of-type(8) {
+    grid-column: 2 / span 1;
+    grid-row: 7;
+  }
+
+  .extra1d label:nth-of-type(9) {
+    grid-column: 3 / span 1;
+    grid-row: 7;
+  }
+
+  .extra1d label:nth-of-type(10) {
+    grid-column: 1 / span 5;
+    grid-row: 8;
+  }
 }
 
 @media (max-width: 650px) {
@@ -421,19 +479,19 @@ input[type="submit"]:hover {
   .stap1 label:nth-of-type(1) {
     grid-column: span 8;
   }
-  
+
   .stap1 label:nth-of-type(2) {
     grid-column: 9 / span 4;
   }
-  
+
   .stap1 label:nth-of-type(3) {
     grid-column: 1 / span 12;
   }
-  
+
   .stap1 label:nth-of-type(4) {
     grid-column: 1 / span 12;
   }
-  
+
   .stap1 label:nth-of-type(5) {
     grid-column: 1 / span 4;
   }
@@ -464,16 +522,29 @@ input[type="submit"]:hover {
   }
 
   .extra1d label:nth-of-type(6) {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 5;
     grid-row: 6;
   }
 
   .extra1d label:nth-of-type(7) {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 1;
     grid-row: 7;
   }
 
+  .extra1d label:nth-of-type(8) {
+    grid-column: 2 / span 1;
+    grid-row: 7;
+  }
 
+  .extra1d label:nth-of-type(9) {
+    grid-column: 3 / span 1;
+    grid-row: 7;
+  }
+
+  .extra1d label:nth-of-type(10) {
+    grid-column: 1 / span 5;
+    grid-row: 8;
+  }
 }
 
 @media (max-width: 450px) {
@@ -485,22 +556,51 @@ input[type="submit"]:hover {
     grid-column: 1 / span 12;
   }
 
+  body:has(input[type="radio"][id="1d-ja"]:checked) form .extra1d {
+    grid-template-rows: (10, 1fr);
+  }
+
   .stap1 label:nth-of-type(1) {
     grid-column: span 12;
   }
-  
-  .stap1 label:nth-of-type(2) {
-    grid-column: span 6;  }
-  
-  .stap1 label:nth-of-type(3) {
-    grid-column: span 12;  }
-  
-  .stap1 label:nth-of-type(4) {
-    grid-column: span 12;  }
-  
-  .stap1 label:nth-of-type(5) {
-    grid-column: span 6;  }
 
+  .stap1 label:nth-of-type(2) {
+    grid-column: span 6;
+  }
+
+  .stap1 label:nth-of-type(3) {
+    grid-column: span 12;
+  }
+
+  .stap1 label:nth-of-type(4) {
+    grid-column: span 12;
+  }
+
+  .stap1 label:nth-of-type(5) {
+    grid-column: span 6;
+  }
+
+  .stap1 label:nth-of-type(6) {
+    grid-column: 1 / span 4;
+  }
+  .stap1 label:nth-of-type(7) {
+    grid-column: 5 / span 4;
+  }
+  .stap1 label:nth-of-type(8) {
+    grid-column: 9 / span 4;
+  }
+
+  .extra1b div label:nth-of-type(1) {
+    grid-column: 1 / span 3;
+  }
+  
+  .extra1b div label:nth-of-type(2) {
+    grid-column: 1 / span 3;
+  }
+  
+  .extra1b div label:nth-of-type(3) {
+    grid-column: 1 / span 3;
+  }
 
   .extra1d label:nth-of-type(1) {
     grid-column: 1 / span 5;
@@ -508,7 +608,7 @@ input[type="submit"]:hover {
   }
 
   .extra1d label:nth-of-type(2) {
-    grid-column: 1 / span 5;
+    grid-column: 1 / span 3;
     grid-row: 2;
   }
 
@@ -537,14 +637,25 @@ input[type="submit"]:hover {
     grid-row: 7;
   }
 
+  .extra1d label:nth-of-type(8) {
+    grid-column: 1 / span 5;
+    grid-row: 8;
+  }
+
+  .extra1d label:nth-of-type(9) {
+    grid-column: 1 / span 5;
+    grid-row: 9;
+  }
+
+  .extra1d label:nth-of-type(10) {
+    grid-column: 1 / span 5;
+    grid-row: 10;
+  }
 }
 
-
-::-webkit-inner-spin-button{
-  display:none;
+::-webkit-inner-spin-button {
+  display: none;
 }
 /* vraag 11A OPTgroup met select input, om aanbevolen te geven, gebruik ook hr
 
 Output in een input voor het berekenen van rekensommen*/
-
-
