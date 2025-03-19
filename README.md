@@ -24,11 +24,11 @@ In week 2 was het voor mij de bedoeling om de responsiveness alvast aan te pakke
 
 Verder heb ik gewerkt aan de vragen waarbij er wel of niet meerdere opties in beeld komen. Zodra je op sommige vragen van het PDF-document "ja" antwoordt, moet je meer vragen invullen. Uiteraard is dit voor UX-designers een interessant onderwerp, omdat je hiermee tijd kunt winnen voor de gebruikers die deze extra vragen niet hoeven in te vullen. Ik heb de vragen ingesteld met behulp van :has. Zoals je in de code kunt zien, is het een normaal blok dat standaard op `display: none;` staat. Hierdoor is het niet zichtbaar, maar ook niet voor screenreaders. Zodra het juiste vakje is aangevinkt, wordt het pop-upblok op `display: block/grid;` gezet om het in beeld te brengen. Nu worden deze blokken dus wel meegenomen door de screenreaders.
 
-<img src="readme-img/has oud.png">
+<img src="readme-img/has-oud.png">
 
 Verder heb ik deze week nog de radio buttons een stijl gegeven in de vorm van NS.
 
-<img src="readme-img/pop up met buttons.png>
+<img src="readme-img/pop-up-met-buttons.png>
 
 Ook de feedback die ik hierop kreeg was vrij positief. De stijl van NS was al goed uitgewerkt en de pop up blokken zagen er goed uit. Wel kreeg ik nog een denkwijze mee om meer aan progressive enhancement te voldoen. Wat als :has niet werkt.
 
@@ -36,14 +36,14 @@ Ook de feedback die ik hierop kreeg was vrij positief. De stijl van NS was al go
 
 In week 3 heb ik naar mijn mening niet heel grote voortgang kunnen maken. Ik heb namelijk veel tijd besteed aan een buggy Fieldset die ervoor zorgde dat ik in de tag van de fieldset geen `display: grid` kon gebruiken. Tenminste, het kan wel, maar het werkt niet altijd zoals ik wilde. Zoals je op de foto kunt zien, als ik over de fieldset hover met de grid, zie je de gridlijnen niet in de inspector, terwijl dit bij andere elementen wel duidelijk zichtbaar is. Zodra ik een label in de fieldset een span van 1 wilde geven, werd deze niet goed meegenomen, waardoor de 1fr van de grid column groter werd zonder dat ik dat wilde. Uiteindelijk, nadat ik had ontdekt dat het aan de fieldset lag, heb ik een div eronder gebouwd waar de content in komt te staan en daar de grid op gezet.
 
-<img src="readme-img/grid fout.png>
+<img src="readme-img/grid-fout.png>
 
 Een ander onderdeel waar ik mij mee bezig hield, is het maken van een backup voor de pop-ups met behulp van :has, zodat elke browser ondersteund wordt, mocht :has niet beschikbaar zijn. In de onderstaande code vertel ik eigenlijk dat het pop-upblok standaard zichtbaar is. Mocht de :has-functie uiteindelijk wel ondersteund worden en er nog niks aangevinkt zijn, dan wordt de display op `none` gezet. Zodra de juiste radio button is aangevinkt, komt de pop-up weer in beeld.
 
 Verder heb ik deze week de tweede pagina van mijn formulier uitgewerkt en een klein stukje JS-script geschreven voor het berekenen van de breuk naar procent.
 
 Dit is een klein geautomatiseerd stukje om de gebruikerservaring te verbeteren. Mocht JS bij een gebruiker niet werken, is deze functie niet meer aanwezig, maar dit zal de uiteindelijke code niet verstoren. Een kleine verbetering dus.
-<img src="readme-img/has goed.png>
+<img src="readme-img/has-goed.png>
 
 Ook had ik een eerste opzetje gemaakt voor valid en invalid velden, hoe dit getoond wordt.
 
@@ -52,10 +52,10 @@ De feedback kregen we van de weekly nerd die als eerste heel lovend was over de 
 <h2>Week 4</h2>
 
 De laatste week was vooral gericht op het afmaken van de laatste dingetjes. Als eerste was het heel belangrijk om mijn local storage op te lossen. Hierin had ik nog niks geprobeerd, maar na wat rondvragen over hoe anderen het gedaan hadden, kwam ik op het volgende stukje code uit:
-<img src="readme-img/local storage.png>
+<img src="readme-img/local-storage.png>
 
 Verder heb ik deze week mijn invalid en valid inputs verbeterd met de feedback van de week ervoor. Ik heb de validatie ook een zichtbaar icoon gegeven in plaats van alleen kleur. Het ziet er nu als volgt uit:
-<img src="readme-img/valid invalid.png>
+<img src="readme-img/valid-invalid.png>
 
 De iconen zijn achtergrondafbeeldingen die je niet laat herhalen.
 
