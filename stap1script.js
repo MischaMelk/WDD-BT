@@ -1,5 +1,6 @@
 
-
+// Local storage code, Pakt de ID en vult deze ID ook weer in zodra pagina geladen wordt.
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 document.addEventListener("DOMContentLoaded", function() {
     let allInputs = document.querySelectorAll("input, textarea");
 
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+// Breuken berekening.
 let b1 = document.getElementById("breuk-1");
 let b2 = document.getElementById("breuk-2");
 let perc = document.getElementById("procent");

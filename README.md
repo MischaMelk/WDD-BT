@@ -65,3 +65,24 @@ Voor de berekening van de breuk naar procenten heb ik nog een kleine aanpassing 
 <img src="readme-img/breuk.png">
 
 Als allerlaatste heb ik mijn code nog een beetje opgeruimd en de juiste notaties toegevoegd, zodat deze zo duidelijk mogelijk leesbaar is.
+
+
+<h2>Bronnen</h2>
+
+Het gebruik van Local Storage.
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+Mijn eerste keer werken met fieldset.
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset
+
+Huisstijl van NS
+https://www.ns.nl/platform/fundamentals/index.html
+
+Meer info over:has
+https://css-tricks.com/the-css-has-selector/
+
+Info over de ondersteunde browsers
+https://caniuse.com/?search=%3Ahas
+
+Testen of display block te animeren was
+https://chatgpt.com/share/67dad81c-f214-8006-9c2d-ad13f3d8b058 

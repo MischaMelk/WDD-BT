@@ -1,3 +1,4 @@
+/* Basis stijling van NS */
 :root {
   --yellow: #ffc917;
   --blue: #003082;
@@ -69,6 +70,7 @@ main section p {
   grid-column: span 12;
 }
 
+/* Button in stijl van NS met juiste animatie */
 main section a {
   text-decoration: none;
   background-color: var(--light-blue);
@@ -102,170 +104,7 @@ label {
   font-weight: bold;
 }
 
-.space-between {
-  background-color: white;
-  display: grid;
-  grid-template-columns: repeat(12, 7.3%);
-  gap: 1%;
-  margin: 0 auto;
-  margin-top: 2em;
-  padding-bottom: 1em;
-  border: none;
-  border-bottom: 1px solid var(--background-color);
-}
-
-.stap1 label:nth-of-type(1) {
-  grid-column: span 3;
-  font-weight: bold;
-}
-
-.stap1 label:nth-of-type(2) {
-  grid-column: 4 / span 1;
-}
-
-.stap1 label:nth-of-type(3) {
-  grid-column: 5 / span 3;
-}
-
-.stap1 label:nth-of-type(4) {
-  grid-column: 1 / span 3;
-}
-
-.stap1 label:nth-of-type(5) {
-  grid-column: 1 / span 1;
-}
-
-.stap1 label:nth-of-type(6) {
-  grid-column: 1 / span 1;
-  font-weight: normal;
-}
-
-.stap1 label:nth-of-type(7) {
-  grid-column: 2 / span 1;
-  font-weight: normal;
-}
-
-.stap1 label:nth-of-type(8) {
-  grid-column: 3 / span 1;
-  font-weight: normal;
-}
-
-.stap1 form div:nth-of-type(1) {
-  grid-column: 1 / span 5;
-}
-
-/* Stijl van de pop up van de extra vragen */
-.pop-up {
-  grid-column: 6 / span 7;
-  background-color: rgb(233, 250, 255);
-  display: none;
-  padding: 2em;
-  transform: translateY(-20px); /* Begin buiten beeld */
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Zorgt ervoor dat 'visibility' na de animatie pas verandert */
-  margin-top: 1em;
-}
-
-.pop-up label {
-  display: flex;
-  flex-direction: row;
-}
-
-.pop-up p {
-  margin-bottom: 1em;
-}
-
-.extra1c div {
-  display: none;
-  margin-top: 1em;
-}
-
-/* het laten zien van de extra vragen waar nodig */
-body:has(input[type="radio"][id="1b-ja"]:checked) form .extra1b {
-  display: block;
-}
-
-body:has(input[type="radio"][id="1c"]:checked) form .extra1c {
-  display: block;
-}
-
-body:has(input[type="radio"][id="1c-2"]:checked) form .extra1c div {
-  display: block;
-}
-
-body:has(input[type="radio"][id="1d-ja"]:checked) form .extra1d {
-  display: grid;
-  grid-template-columns: repeat(5, 19%);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 1.2%;
-}
-
-.extra1b div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1%;
-}
-
-.extra1b div label {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1em;
-}
-
-.extra1b div label:nth-of-type(1) {
-  grid-column: 1 / span 1;
-}
-
-.extra1b div label:nth-of-type(2) {
-  grid-column: 2 / span 1;
-}
-
-.extra1b div label:nth-of-type(3) {
-  grid-column: 3 / span 1;
-}
-
-.extra1d label {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1em;
-}
-
-.extra1d label:nth-of-type(1) {
-  grid-area: 1 / 1 / 2 / 3;
-}
-
-.extra1d label:nth-of-type(2) {
-  grid-area: 2 / 1 / 3 / 3;
-}
-
-.extra1d label:nth-of-type(3) {
-  grid-area: 2 / 3 / 3 / 4;
-}
-
-.extra1d label:nth-of-type(4) {
-  grid-area: 2 / 4 / 3 / 6;
-}
-
-.extra1d label:nth-of-type(5) {
-  grid-area: 3 / 1 / 4 / 4;
-}
-
-.extra1d label:nth-of-type(6) {
-  grid-area: 4 / 1 / 5 / 6;
-}
-
-.extra1d label:nth-of-type(7) {
-  grid-area: 5 / 1 / 5 / 2;
-}
-
-.extra1d label:nth-of-type(8) {
-  grid-area: 5 / 2 / 5 / 3;
-}
-
-.extra1d label:nth-of-type(9) {
-  grid-area: 5 / 3 / 5 / 3;
-}
-
+/* Input styling */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -363,6 +202,175 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
+/* Stijling voor elk blok met vragen. */
+.space-between {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(12, 7.3%);
+  gap: 1%;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding-bottom: 1em;
+  border: none;
+  border-bottom: 1px solid var(--background-color);
+}
+
+/* Grid voor het eerste block */
+.stap1 label:nth-of-type(1) {
+  grid-column: span 3;
+  font-weight: bold;
+}
+
+.stap1 label:nth-of-type(2) {
+  grid-column: 4 / span 1;
+}
+
+.stap1 label:nth-of-type(3) {
+  grid-column: 5 / span 3;
+}
+
+.stap1 label:nth-of-type(4) {
+  grid-column: 1 / span 3;
+}
+
+.stap1 label:nth-of-type(5) {
+  grid-column: 1 / span 1;
+}
+
+.stap1 label:nth-of-type(6) {
+  grid-column: 1 / span 1;
+  font-weight: normal;
+}
+
+.stap1 label:nth-of-type(7) {
+  grid-column: 2 / span 1;
+  font-weight: normal;
+}
+
+.stap1 label:nth-of-type(8) {
+  grid-column: 3 / span 1;
+  font-weight: normal;
+}
+
+.stap1 form div:nth-of-type(1) {
+  grid-column: 1 / span 5;
+}
+
+/* Stijl van de pop up van de extra vragen */
+.pop-up {
+  grid-column: 6 / span 7;
+  background-color: rgb(233, 250, 255);
+  display: none;
+  padding: 2em;
+  transform: translateY(-20px); /* Begin buiten beeld */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Zorgt ervoor dat 'visibility' na de animatie pas verandert */
+  margin-top: 1em;
+}
+
+.pop-up label {
+  display: flex;
+  flex-direction: row;
+}
+
+.pop-up p {
+  margin-bottom: 1em;
+}
+
+.extra1c div {
+  display: none;
+  margin-top: 1em;
+}
+
+/* het laten zien van de extra vragen waar nodig */
+body:has(input[type="radio"][id="1b-ja"]:checked) form .extra1b {
+  display: block;
+}
+
+body:has(input[type="radio"][id="1c"]:checked) form .extra1c {
+  display: block;
+}
+
+body:has(input[type="radio"][id="1c-2"]:checked) form .extra1c div {
+  display: block;
+}
+
+body:has(input[type="radio"][id="1d-ja"]:checked) form .extra1d {
+  display: grid;
+  grid-template-columns: repeat(5, 19%);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1.2%;
+}
+
+/* Layout van 2de popup */
+.extra1b div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1%;
+}
+
+.extra1b div label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.extra1b div label:nth-of-type(1) {
+  grid-column: 1 / span 1;
+}
+
+.extra1b div label:nth-of-type(2) {
+  grid-column: 2 / span 1;
+}
+
+.extra1b div label:nth-of-type(3) {
+  grid-column: 3 / span 1;
+}
+
+/* Layout van 4de pop up. */
+.extra1d label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.extra1d label:nth-of-type(1) {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.extra1d label:nth-of-type(2) {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.extra1d label:nth-of-type(3) {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.extra1d label:nth-of-type(4) {
+  grid-area: 2 / 4 / 3 / 6;
+}
+
+.extra1d label:nth-of-type(5) {
+  grid-area: 3 / 1 / 4 / 4;
+}
+
+.extra1d label:nth-of-type(6) {
+  grid-area: 4 / 1 / 5 / 6;
+}
+
+.extra1d label:nth-of-type(7) {
+  grid-area: 5 / 1 / 5 / 2;
+}
+
+.extra1d label:nth-of-type(8) {
+  grid-area: 5 / 2 / 5 / 3;
+}
+
+.extra1d label:nth-of-type(9) {
+  grid-area: 5 / 3 / 5 / 3;
+}
+
+/* Responsiveness */
 @media (max-width: 1000px) {
   .stap1 form div:nth-of-type(1) {
     grid-column: 1 / span 12;
@@ -653,9 +661,7 @@ input[type="submit"]:hover {
   }
 }
 
+/* Buttons in number input weghalen. */
 ::-webkit-inner-spin-button {
   display: none;
 }
-/* vraag 11A OPTgroup met select input, om aanbevolen te geven, gebruik ook hr
-
-Output in een input voor het berekenen van rekensommen*/
